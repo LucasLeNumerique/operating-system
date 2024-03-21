@@ -1,10 +1,12 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
 .body-container {
@@ -14,8 +16,9 @@ body {
   background-size: cover;
 }
 .body-desk {
-  display: grid;
   padding: 0.25rem 0 0;
+  display: grid;
+  height: 90vh;
   grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(6rem, 1fr));
   row-gap: 0.25rem;
@@ -23,31 +26,58 @@ body {
 .body-desk #static-app {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
+  width: 1150px;
+  height: 800px;
   opacity: 0;
-  transform: translate(-50%, -48%);
-  max-width: 1100px;
-  max-height: 750px;
-  overflow-y: scroll;
+  transform: translate(-50%, -45%);
   background-color: white;
-  border: 1px solid #60c065 !important;
-  border-top: 2rem solid #60c065 !important;
+  border: 1px solid lightgreen;
+  border-top: 0;
 }
 .body-desk #static-app.fadein {
-  opacity: 1;
   transform: translate(-50%, -50%);
+  opacity: 1;
   transition: all 0.2s ease-out;
 }
 .body-desk #static-app::-webkit-scrollbar {
   display: none;
 }
-.body-desk .ninja-close {
+.body-app-container {
+  position: relative;
+  padding-top: 1.75rem;
+  width: 100%;
+  height: 100%;
+}
+.body-app-top {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.75rem;
   top: 0;
+  left: 0;
   right: 0;
-  width: 2rem;
-  height: 2rem;
+  background-color: lightgreen;
+}
+.body-app-name {
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+.body-close {
+  padding: 0 0.75rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+}
+.body-close:hover {
+  background-color: red;
+}
+.body-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .body-app {
   cursor: pointer;
@@ -66,7 +96,15 @@ body {
   text-shadow: 0px 0px 5px black;
 }
 .body-app:nth-of-type(3) {
+  grid-column: 1/2;
   grid-row: 2/3;
+}
+.body-app:nth-of-type(4) {
+  grid-column: -1/-2;
+}
+.body-app:nth-of-type(5) {
+  grid-column: -1/-2;
+  grid-row: -1/-2;
 }
 .body-app:hover {
   background-color: rgba(255, 255, 255, 0.5);
