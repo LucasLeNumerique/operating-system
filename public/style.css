@@ -23,61 +23,29 @@ body {
   grid-template-rows: repeat(auto-fill, minmax(6rem, 1fr));
   row-gap: 0.25rem;
 }
-.body-desk #static-app {
-  display: none;
-  position: absolute;
-  top: 47%;
-  left: 50%;
+.body-desk #app-chrome {
   width: 1150px;
   height: 800px;
-  opacity: 0;
-  transform: translate(-50%, -45%);
   background-color: white;
-  border: 1px solid lightgreen;
-  border-top: 0;
+  border: 1px solid #2e2e2e;
 }
-.body-desk #static-app.fadein {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: all 0.2s ease-out;
+.body-desk #app-notes {
+  width: 500px;
+  height: 700px;
+  background-color: #ebe977;
+  border: 1px solid #5a5c00;
 }
-.body-desk #static-app::-webkit-scrollbar {
-  display: none;
+.body-desk #app-code {
+  width: 1150px;
+  height: 800px;
+  background-color: #533e51;
+  border: 1px solid #838383;
+  color: white;
 }
-.body-app-container {
-  position: relative;
-  padding-top: 1.75rem;
-  width: 100%;
-  height: 100%;
-}
-.body-app-top {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.75rem;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: lightgreen;
-}
-.body-app-name {
-  padding: 0 0.75rem;
-  font-size: 0.75rem;
-}
-.body-close {
-  padding: 0 0.75rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: all 0.15s ease-in-out;
-}
-.body-close:hover {
-  background-color: red;
-}
-.body-close svg {
-  width: 1.25rem;
-  height: 1.25rem;
+.body-desk #app-video {
+  width: fit-content;
+  background-image: linear-gradient(to bottom, #d1d1d1, black);
+  border: none;
 }
 .body-app {
   cursor: pointer;
@@ -103,6 +71,10 @@ body {
   grid-column: -1/-2;
 }
 .body-app:nth-of-type(5) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.body-app:nth-of-type(6) {
   grid-column: -1/-2;
   grid-row: -1/-2;
 }
@@ -111,6 +83,64 @@ body {
 }
 .body-app:active {
   background-color: rgba(255, 255, 255, 0.75);
+}
+.body-window {
+  display: none;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -45%);
+  box-sizing: border-box;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.body-window.fadein {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+.body-window::-webkit-scrollbar {
+  display: none;
+}
+.body-app-container {
+  position: relative;
+  padding-top: 1.75rem;
+  width: 100%;
+  height: 100%;
+}
+.body-app-top {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.75rem;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.body-app-name {
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+.body-close {
+  cursor: pointer;
+  padding: 0 0.75rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+  border-top-right-radius: 0.5rem;
+}
+.body-close:hover {
+  background-color: red;
+}
+.body-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.body-app-content {
+  padding: 5rem 2.5rem;
 }
 .body-taskbar {
   position: absolute;
@@ -124,10 +154,11 @@ body {
   background-color: #f5f5f5;
 }
 .body-task {
-  padding: 0.25rem 0.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
   display: flex;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   justify-content: center;
   align-items: center;
 }

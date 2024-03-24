@@ -10,16 +10,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000)
 })
 
-var firstApp = document.getElementById('static-app')
-function staticApp() {
-    // open static window
-    firstApp.style.display = "block"
+var chromeWindow = document.getElementById('app-chrome')
+var notesWindow = document.getElementById('app-notes')
+var codeWindow = document.getElementById('app-code')
+var videoWindow = document.getElementById('app-video')
+
+function chromeApp() {
+    chromeWindow.style.display = "block"
     setTimeout(() => {
-        firstApp.classList.add("fadein")
+        chromeWindow.classList.add("fadein")
+    }, 0);
+}
+function notesApp() {
+    notesWindow.style.display = "block"
+    setTimeout(() => {
+        notesWindow.classList.add("fadein")
+    }, 0);
+}
+function codeApp() {
+    codeWindow.style.display = "block"
+    setTimeout(() => {
+        codeWindow.classList.add("fadein")
+    }, 0);
+}
+function videoApp() {
+    videoWindow.style.display = "block"
+    setTimeout(() => {
+        videoWindow.classList.add("fadein")
     }, 0);
 }
 function closeWindows() {
-    // close static window
-    firstApp.style.display = "none"
-    firstApp.classList.remove("fadein")
+    chromeWindow.style.display = "none"
+    notesWindow.style.display = "none"
+    codeWindow.style.display = "none"
+    videoWindow.style.display = "none"
+
+    chromeWindow.classList.remove("fadein")
+    notesWindow.classList.remove("fadein")
+    codeWindow.classList.remove("fadein")
+    videoWindow.classList.remove("fadein")
 }
