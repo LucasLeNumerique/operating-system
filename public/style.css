@@ -29,6 +29,13 @@ body {
   background-color: white;
   border: 1px solid #2e2e2e;
 }
+.body-desk #app-photoshop {
+  width: 1150px;
+  height: 800px;
+  background-image: linear-gradient(to right, #262527, #67458a);
+  border: 1px solid #262527;
+  color: white;
+}
 .body-desk #app-notes {
   width: 500px;
   height: 700px;
@@ -47,7 +54,18 @@ body {
   background-image: linear-gradient(to bottom, #d1d1d1, black);
   border: none;
 }
+.body-title {
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  font-size: 5em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px black;
+}
 .body-app {
+  z-index: 2;
   cursor: pointer;
   padding-top: 0.25rem;
   height: 100%;
