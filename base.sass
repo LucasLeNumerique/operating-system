@@ -44,19 +44,7 @@ body
             width: fit-content
             background-image: linear-gradient(to bottom, #d1d1d1, black)
             border: none
-    &-title
-        position: absolute
-        top: 2rem
-        width: 100%
-        font:
-            size: 5em
-            weight: normal
-        text:
-            align: center
-            transform: uppercase
-            shadow: 1px 1px 5px black
     &-app
-        z-index: 2
         cursor: pointer
         padding-top: 0.25rem
         height: 100%
@@ -158,6 +146,16 @@ body
         img
             width: 80%
             height: 80%
+    &-title
+        position: absolute
+        top: 50%
+        left: 1rem
+        text-align: left
+        transform: translateY(-50%)
+        font:
+            size: 1rem
+            transform: uppercase
+            color: #7a7a7a
     &-time
         position: absolute
         top: 50%

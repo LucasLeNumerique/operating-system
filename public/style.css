@@ -54,18 +54,7 @@ body {
   background-image: linear-gradient(to bottom, #d1d1d1, black);
   border: none;
 }
-.body-title {
-  position: absolute;
-  top: 2rem;
-  width: 100%;
-  font-size: 5em;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 5px black;
-}
 .body-app {
-  z-index: 2;
   cursor: pointer;
   padding-top: 0.25rem;
   height: 100%;
@@ -189,6 +178,16 @@ body {
 .body-task img {
   width: 80%;
   height: 80%;
+}
+.body-title {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  text-align: left;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-transform: uppercase;
+  font-color: #7a7a7a;
 }
 .body-time {
   position: absolute;
