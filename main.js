@@ -1,3 +1,5 @@
+import { startClock } from "./assets/scripts/datetime.js";
+
 console.log("Hi, I'm Lucas");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,3 +61,7 @@ function closeWindows() {
     codeWindow.classList.remove("fadein")
     videoWindow.classList.remove("fadein")
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    startClock();
+});
